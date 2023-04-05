@@ -6,18 +6,18 @@ const products = [
   { id: 5, name: "Dell inspiron laptop", price: 17000 },
   { id: 6, name: "samsung s22 ultra phone", price: 17000 },
   { id: 7, name: "nokia phone 1201", price: 17000 },
-  { id: 8, name: "one plus latest phone", price: 17000 },
+  { id: 8, name: "one plus latest Phone", price: 17000 },
   { id: 9, name: "apple i watch", price: 17000 },
 ];
 
 function matchedProducts(products, search) {
   let matchedProducts = [];
   for (const product of products) {
-    if (product.name.includes(search)) {
+    if (product.name.toLowerCase().includes(search.toLowerCase())) {
       matchedProducts.push(product);
     }
   }
   return matchedProducts;
 }
-const result = matchedProducts(products, "phone");
+const result = matchedProducts(products, "laptop");
 console.log(result);
