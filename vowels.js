@@ -1,14 +1,10 @@
 const vowels = "i am the king of my own kingdom";
 
 function count(vowels) {
-  const a = "a";
-  const e = "e";
-  const i = "i";
-  const o = "o";
-  const u = "u";
+  const vowel = ["a", "e", "i", "o", "u"];
   let cou = 0;
   for (const l of vowels) {
-    if (l == a || l == e || l == i || l == o || l == u) {
+    if (vowel.includes(l)) {
       cou++;
     }
   }
